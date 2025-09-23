@@ -1,0 +1,37 @@
+Phishing Email Analysis
+
+Objective: Identify phishing characteristics in a suspicious email sample.
+
+Tools:
+- Email client or saved email file (text)
+- Free online header analyzer
+
+Sample Email: (In repo)
+
+Main Features of a Phishing Mail:
+1) Creating a sense of urgency (eg: "please let us know by going to this secure website and validate your email")
+2) Unverified IDs (eg: The mail is only signed as "IT" with no official contact)
+3) Providing links (eg: The text says “secure website” but the actual URL is unknown/malicious)
+
+Steps to Identify if the Mail is Valid:
+- Checking the headers using an online analyzer (eg: Mxtoolbox)
+- Verifying the sender email address is valid
+- Checking for spelling and grammatical mistakes
+- Inspecting URL links (use whois to find domain owner, VirusTotal to check if the URL is malicious)
+- Verifying with authorities whether the statements in the mail are true
+
+Observed Phishing Characteristics
+- Urgency to act immediately
+- Suspicious or spoofed sender email
+- Malicious link claiming to be a secure login page
+- Minor spelling or grammar mistakes
+- Tailored information (victim's name, role, or workplace) — indicates spear phishing
+
+Recommended Actions
+- Do not click on any links
+- Report the email to IT/security
+- Reset passwords if any credentials were entered
+- Educate users about phishing characteristics to prevent future attacks
+
+Summary:
+This report analyzes a sample phishing email, identifies the techniques used (urgency, spoofed sender, malicious links, spear phishing), and provides steps to safely verify and respond.
