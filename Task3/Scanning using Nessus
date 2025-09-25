@@ -1,0 +1,23 @@
+Basic Vulnerability Scan using Nessus Essentials
+Performed a vulnerability scan on localhost using Nessus Essentials.
+
+Summary:
+Target: 127.0.0.1 (localhost)
+
+Scan Type: Basic Network Scan
+
+Duration: ~45 minutes
+
+Total Vulnerabilities: 32
+Critical: 0
+High: 0
+Medium: 2
+Low: 0
+Informational: 30
+
+Key Findings:
+SSL Certificate Cannot Be Trusted (Medium) — Replace with a trusted CA-issued certificate.
+SMB Signing Not Required (Medium) — Enable SMB signing via Windows Group Policy.
+
+Conclusion:
+No critical or high vulnerabilities found. Remediating medium issues will enhance system security.
