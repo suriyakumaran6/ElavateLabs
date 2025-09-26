@@ -1,0 +1,16 @@
+1. Use Win+r
+Type"wf.msc".
+2. Block Port 80 (HTTP)
+Inbound Rules → New Rule → Port → TCP 80 → Block the connection → Name: BlockHTTP → Finish.
+3. Block Port 23 (Telnet)
+Inbound Rules → New Rule → Port → TCP 23 → Block the connection → Name: Block Telnet → Finish.
+4. Test
+For Port 80: Open a browser (http://example.com).
+For Port 23: Run telnet localhost 23.
+Both should be blocked.
+5. Remove Rules
+Go to Inbound Rules, find Block HTTP or Block Telnet, then Disable or Delete.
+
+Port 80 = HTTP, Port 23 = Telnet.
+Firewall filters by port, protocol, direction.
+Blocking prevents unwanted access but can be reverted anytime.
