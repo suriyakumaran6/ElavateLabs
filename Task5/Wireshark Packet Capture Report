@@ -1,0 +1,55 @@
+Wireshark Packet Capture Report
+
+1. Introduction
+   This report summarizes the analysis of a Wireshark packet capture session. The capture was taken after browsing websites and generating network traffic for analysis.
+
+2. Capture Details
+* Duration: ~1 minute
+* Interface Used: Active network interface (Wi-Fi/Ethernet)
+* Traffic Generated: Web browsing, DNS resolution, TLS connections
+* File Format: .pcap
+
+3. Protocols Identified
+
+| Protocol          | Purpose                                                     |
+| ----------------- | ----------------------------------------------------------- |
+| DNS               | Resolves domain names into IP addresses                     |
+| TCP               | Reliable transport protocol for data transfer               |
+| TLSv1.2 / TLSv1.3 | Secures communication with encryption for HTTPS connections |
+| QUIC              | Low-latency transport protocol used by HTTP/3               |
+
+4. Protocol Details and Observations
+
+DNS
+* Multiple DNS queries and responses were observed.
+* Examples:
+  * aefd.nelreports.net resolved to a1851.dscg2.akamai.net
+  * mail.google.com resolved to ns1.google.com
+* Purpose: Translates domain names into IP addresses.
+* Observation: DNS queries preceded HTTPS connections, as expected.
+
+TCP
+* Numerous TCP handshake sequences observed (SYN, SYN-ACK, ACK).
+* Example: 51044 → 443 [SYN], 443 → 51044 [SYN, ACK], 51044 → 443 [ACK]
+* Purpose: Ensures reliable, ordered delivery of packets.
+
+TLSv1.2 / TLSv1.3
+* Several TLS handshakes occurred after TCP setup.
+* Examples: Client Hello, Server Hello, Change Cipher Spec, Application Data
+* Purpose: Encrypts traffic to prevent interception.
+* Observation: TLSv1.3 dominates, indicating modern secure browsing.
+
+QUIC
+* QUIC protocol packets detected.
+* Examples: QUIC Initial, DCID=12060b2487ba5309, Handshake
+* Purpose: Low-latency encrypted transport protocol.
+* Observation: Indicates HTTP/3 usage.
+
+5. Insights
+
+* DNS resolution happens before TCP and TLS connections.
+* TCP handshakes establish a reliable connection before encryption.
+* TLSv1.3 is widely used for secure browsing.
+* QUIC appears as a modern transport protocol for faster web communication.
+* No suspicious anomalies detected — traffic follows normal browsing patterns.
+
