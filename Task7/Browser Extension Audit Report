@@ -1,0 +1,50 @@
+# Browser Extension Audit Report
+
+**Browser Used:** Microsoft Edge
+
+---
+
+## Installed Extensions
+
+### 1. uBlock Origin
+
+* **Description:** An efficient ad-blocker. Easy on CPU and memory.
+* **Permissions:** Reads website data for ad-blocking purposes.
+* **Verdict:** Legitimate. **Kept**.
+
+### 2. Google Docs Offline
+
+* **Description:** Allows offline use of Google Docs. Comes pre-installed.
+* **Permissions:** Accesses Google Docs data for offline work.
+* **Verdict:** Legitimate. **Kept**.
+
+---
+
+## Suspicious Extension Check
+
+Both installed extensions have been reviewed and found to be safe. No suspicious extensions detected.
+
+---
+
+## Steps Taken
+
+1. Opened Microsoft Edge and navigated to **Extensions** → **Manage extensions**.
+2. Reviewed all installed extensions.
+3. Checked permissions and developer information.
+4. No suspicious or harmful extensions were found.
+5. No extensions were removed.
+
+---
+
+## Summary Table
+
+| Extension Name      | Suspicious Indicators | Action Taken |
+| ------------------- | --------------------- | ------------ |
+| uBlock Origin       | None                  | Kept         |
+| Google Docs Offline | None                  | Kept         |
+
+---
+
+## Conclusion
+
+No suspicious browser extensions were detected. Both installed extensions are verified, safe, and serve useful purposes. Regular audits of browser extensions should be performed to maintain browser security and performance.
